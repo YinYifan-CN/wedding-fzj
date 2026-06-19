@@ -1,100 +1,13 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f8efe2" />
-    <title>婚宴查座签到</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
   </head>
   <body>
-    <main class="app">
-      <section class="hero section" id="home">
-        <p class="date">2026年6月20日</p>
-        <h1>朴昶植先生 & 范嘉瑞女士</h1>
-        <p class="subtitle">婚宴座位查询与签到</p>
-        <div class="welcome panel">
-          <strong>欢迎莅临婚礼现场</strong>
-          <span>输入姓名即可查看桌号，完成签到后可直接查看会场位置。</span>
-        </div>
-        <div class="actions">
-          <a class="button primary" href="#search">查找我的座位</a>
-          <a class="button ghost" href="#map">查看会场平面图</a>
-        </div>
-      </section>
-
-      <nav class="tabs">
-        <a href="#home">首页</a>
-        <a href="#search">查座</a>
-        <a href="#map">座位图</a>
-        <a href="#sign">签到</a>
-        <a href="#admin">后台</a>
-      </nav>
-
-      <section class="section" id="search">
-        <div class="section-head">
-          <h2>姓名查座</h2>
-          <p>支持输入姓名、称呼或家庭组合名。</p>
-        </div>
-        <div class="search-row">
-          <input id="searchInput" type="search" placeholder="例如：张燕 / 范志刚 / 新娘父母" autocomplete="off" />
-          <button id="searchButton" class="button primary" type="button">查询</button>
-        </div>
-        <div id="searchResults" class="results"></div>
-      </section>
-
-      <section class="section" id="map">
-        <div class="section-head">
-          <h2>会场座位图</h2>
-          <p>点击桌号查看同桌名单，底部可放大查看原始座次图。</p>
-        </div>
-        <div class="map-panel panel">
-          <div class="stage">舞台</div>
-          <div id="seatMap" class="seat-map"></div>
-        </div>
-        <div id="tableDetail" class="table-detail panel hidden"></div>
-        <div class="source-images">
-          <a href="./assets/seat-list-1.jpg" target="_blank" rel="noreferrer"><img src="./assets/seat-list-1.jpg" alt="座次表第一页" /></a>
-          <a href="./assets/seat-list-2.jpg" target="_blank" rel="noreferrer"><img src="./assets/seat-list-2.jpg" alt="座次表第二页" /></a>
-        </div>
-      </section>
-
-      <section class="section" id="sign">
-        <div class="section-head">
-          <h2>宾客签到</h2>
-          <p>填写姓名、桌号和到场人数即可提交。</p>
-        </div>
-        <form id="signForm" class="form panel">
-          <label><span>姓名</span><input id="signName" required placeholder="请输入姓名" /></label>
-          <label><span>桌号</span><input id="signTable" placeholder="例如 08" inputmode="numeric" /></label>
-          <label><span>到场人数</span><input id="signCount" type="number" min="1" value="1" /></label>
-          <label><span>祝福留言</span><textarea id="signMessage" placeholder="可选"></textarea></label>
-          <button class="button primary" type="submit">提交签到</button>
-          <p id="signStatus" class="status"></p>
-        </form>
-      </section>
-
-      <section class="section" id="admin">
-        <div class="section-head">
-          <h2>签到管理</h2>
-          <p>默认密码 5201314。</p>
-        </div>
-        <div id="adminLogin" class="form panel">
-          <label><span>管理密码</span><input id="adminPassword" type="password" placeholder="请输入管理密码" /></label>
-          <button id="adminLoginButton" class="button primary" type="button">进入后台</button>
-        </div>
-        <div id="adminPanel" class="hidden">
-          <div class="stats">
-            <div class="stat panel"><strong id="recordCount">0</strong><span>签到记录</span></div>
-            <div class="stat panel"><strong id="peopleCount">0</strong><span>到场人数</span></div>
-          </div>
-          <button id="refreshAdmin" class="button ghost" type="button">刷新数据</button>
-          <div id="tableSummary" class="summary panel"></div>
-          <div id="recordList" class="record-list"></div>
-        </div>
-      </section>
-    </main>
-    <script src="./guests.js"></script>
-    <script src="./app.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
