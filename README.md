@@ -46,3 +46,9 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
+## 签到数据
+
+- 未配置 Vercel KV 时，签到记录会保存在当前浏览器本地。
+- 配置 `KV_REST_API_URL` 和 `KV_REST_API_TOKEN` 后，`api/sign.js` 会把签到记录同步到云端。
+- 后台入口在页面底部导航的 `后台`，默认密码为 `5201314`。
