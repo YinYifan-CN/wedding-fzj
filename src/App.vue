@@ -435,7 +435,6 @@ async function openAdmin() {
     <section v-if="currentPage === 'admin'" class="section">
       <div class="section-head">
         <h2>签到管理</h2>
-        <p>默认密码 5201314。</p>
       </div>
 
       <div v-if="!isAdminOpen" class="form panel">
@@ -761,12 +760,16 @@ textarea {
   padding: 18px;
 }
 
+.map-panel {
+  --aisle-color: #dec48f;
+}
+
 .stage {
   width: 90%;
   height: 42px;
   margin: 0 auto;
   color: #6f4d1f;
-  background: #dec48f;
+  background: var(--aisle-color);
   text-align: center;
   line-height: 42px;
   font-weight: 800;
@@ -786,7 +789,7 @@ textarea {
   left: 47%;
   width: 6%;
   height: 100%;
-  background: #d4b879;
+  background: var(--aisle-color);
   content: '';
 }
 
